@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using firstApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace firstApp.Controllers
+
 {
-    public class HomeController : Controller
+    [Authorize]  
+
+      public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
